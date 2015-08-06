@@ -11,7 +11,6 @@
 		39B9B8681B739F180006320D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B8671B739F180006320D /* AppDelegate.m */; };
 		39B9B86B1B739F180006320D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B86A1B739F180006320D /* ViewController.m */; };
 		39B9B86E1B739F180006320D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B86C1B739F180006320D /* Main.storyboard */; };
-		39B9B8711B739F180006320D /* PLComp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B86F1B739F180006320D /* PLComp.xcdatamodeld */; };
 		39B9B8731B739F180006320D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B8721B739F180006320D /* Assets.xcassets */; };
 		39B9B8761B739F180006320D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B8741B739F180006320D /* LaunchScreen.storyboard */; };
 		39B9B8831B73A6350006320D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B8811B73A6350006320D /* Interface.storyboard */; };
@@ -22,6 +21,7 @@
 		39B9B8981B73A6360006320D /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B8971B73A6360006320D /* ComplicationController.m */; };
 		39B9B89A1B73A6360006320D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B8991B73A6360006320D /* Assets.xcassets */; };
 		39B9B89E1B73A6360006320D /* lication.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 39B9B87F1B73A6350006320D /* lication.app */; };
+		39B9B8A91B73AEFB0006320D /* WatchConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B8A81B73AEFB0006320D /* WatchConnectivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		39B9B8691B739F180006320D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		39B9B86A1B739F180006320D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39B9B86D1B739F180006320D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		39B9B8701B739F180006320D /* PLComp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLComp.xcdatamodel; sourceTree = "<group>"; };
 		39B9B8721B739F180006320D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B9B8751B739F180006320D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B9B8771B739F180006320D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +90,8 @@
 		39B9B8971B73A6360006320D /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		39B9B8991B73A6360006320D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B9B89B1B73A6360006320D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B9B8A71B73AEFB0006320D /* WatchConnectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchConnectivity.h; sourceTree = "<group>"; };
+		39B9B8A81B73AEFB0006320D /* WatchConnectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchConnectivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,8 @@
 		39B9B8621B739F180006320D /* PLComp */ = {
 			isa = PBXGroup;
 			children = (
+				39B9B8A71B73AEFB0006320D /* WatchConnectivity.h */,
+				39B9B8A81B73AEFB0006320D /* WatchConnectivity.m */,
 				39B9B8661B739F180006320D /* AppDelegate.h */,
 				39B9B8671B739F180006320D /* AppDelegate.m */,
 				39B9B8691B739F180006320D /* ViewController.h */,
@@ -142,7 +145,6 @@
 				39B9B8721B739F180006320D /* Assets.xcassets */,
 				39B9B8741B739F180006320D /* LaunchScreen.storyboard */,
 				39B9B8771B739F180006320D /* Info.plist */,
-				39B9B86F1B739F180006320D /* PLComp.xcdatamodeld */,
 				39B9B8631B739F180006320D /* Supporting Files */,
 			);
 			path = PLComp;
@@ -314,8 +316,8 @@
 			files = (
 				39B9B86B1B739F180006320D /* ViewController.m in Sources */,
 				39B9B8681B739F180006320D /* AppDelegate.m in Sources */,
-				39B9B8711B739F180006320D /* PLComp.xcdatamodeld in Sources */,
 				39B9B8651B739F180006320D /* main.m in Sources */,
+				39B9B8A91B73AEFB0006320D /* WatchConnectivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,19 +573,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		39B9B86F1B739F180006320D /* PLComp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				39B9B8701B739F180006320D /* PLComp.xcdatamodel */,
-			);
-			currentVersion = 39B9B8701B739F180006320D /* PLComp.xcdatamodel */;
-			path = PLComp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 39B9B8581B739F180006320D /* Project object */;
 }

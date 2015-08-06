@@ -1,27 +1,30 @@
-//
-//  ViewController.m
-//  PLComp
-//
-//  Created by Ivan E. Rodriguez on 8/6/15.
-//  Copyright © 2015 Ivan E. Rodriguez. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "WatchConnectivity.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - <UITextFieldDelegate>
+
+- (void)textFieldDidBeginEditing:(nonnull UITextField *)textField {
+    
+}
+
+- (void)textFieldDidEndEditing:(nonnull UITextField *)textField {
+    if (textField.text.length > 0) {
+        [[WatchConnectivity sharedInstance] updateApplicationContext:@{@"text":textField.text}];
+    }
 }
 
 @end

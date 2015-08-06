@@ -1,11 +1,3 @@
-//
-//  ComplicationController.m
-//  lication Extension
-//
-//  Created by Ivan E. Rodriguez on 8/6/15.
-//  Copyright © 2015 Ivan E. Rodriguez. All rights reserved.
-//
-
 #import "ComplicationController.h"
 
 @interface ComplicationController ()
@@ -20,11 +12,11 @@
     handler(CLKComplicationTimeTravelDirectionForward|CLKComplicationTimeTravelDirectionBackward);
 }
 
-- (void)getTimelineStartDateForComplication:(CLKComplication *)complication withHandler:(void(^)(__nullable NSDate *date))handler {
+- (void)getTimelineStartDateForComplication:(CLKComplication *)complication withHandler:(void(^)(NSDate *_Nullable date))handler {
     handler(nil);
 }
 
-- (void)getTimelineEndDateForComplication:(CLKComplication *)complication withHandler:(void(^)(__nullable NSDate *date))handler {
+- (void)getTimelineEndDateForComplication:(CLKComplication *)complication withHandler:(void(^)(NSDate *_Nullable date))handler {
     handler(nil);
 }
 
@@ -34,31 +26,31 @@
 
 #pragma mark - Timeline Population
 
-- (void)getCurrentTimelineEntryForComplication:(CLKComplication *)complication withHandler:(void(^)(__nullable CLKComplicationTimelineEntry *))handler {
+- (void)getCurrentTimelineEntryForComplication:(CLKComplication *)complication withHandler:(void(^)(CLKComplicationTimelineEntry *_Nullable))handler {
     // Call the handler with the current timeline entry
     handler(nil);
 }
 
-- (void)getTimelineEntriesForComplication:(CLKComplication *)complication beforeDate:(NSDate *)date limit:(NSUInteger)limit withHandler:(void(^)(__nullable NSArray<CLKComplicationTimelineEntry *> *entries))handler {
+- (void)getTimelineEntriesForComplication:(CLKComplication *)complication beforeDate:(NSDate *)date limit:(NSUInteger)limit withHandler:(void(^)(NSArray<CLKComplicationTimelineEntry *> *_Nullable entries))handler {
     // Call the handler with the timeline entries prior to the given date
     handler(nil);
 }
 
-- (void)getTimelineEntriesForComplication:(CLKComplication *)complication afterDate:(NSDate *)date limit:(NSUInteger)limit withHandler:(void(^)(__nullable NSArray<CLKComplicationTimelineEntry *> *entries))handler {
+- (void)getTimelineEntriesForComplication:(CLKComplication *)complication afterDate:(NSDate *)date limit:(NSUInteger)limit withHandler:(void(^)(NSArray<CLKComplicationTimelineEntry *> *_Nullable entries))handler {
     // Call the handler with the timeline entries after to the given date
     handler(nil);
 }
 
 #pragma mark Update Scheduling
 
-- (void)getNextRequestedUpdateDateWithHandler:(void(^)(__nullable NSDate *updateDate))handler {
+- (void)getNextRequestedUpdateDateWithHandler:(void(^)(NSDate *_Nullable updateDate))handler {
     // Call the handler with the date when you would next like to be given the opportunity to update your complication content
     handler(nil);
 }
 
 #pragma mark - Placeholder Templates
 
-- (void)getPlaceholderTemplateForComplication:(CLKComplication *)complication withHandler:(void(^)(__nullable CLKComplicationTemplate *complicationTemplate))handler {
+- (void)getPlaceholderTemplateForComplication:(CLKComplication *)complication withHandler:(void(^)(CLKComplicationTemplate *_Nullable complicationTemplate))handler {
     // This method will be called once per supported complication, and the results will be cached
     handler(nil);
 }
