@@ -17,6 +17,12 @@
 
 #pragma mark - <UITextFieldDelegate>
 
+- (BOOL)textFieldShouldReturn:(nonnull UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return NO;
+}
+
 - (void)textFieldDidBeginEditing:(nonnull UITextField *)textField {
     
 }

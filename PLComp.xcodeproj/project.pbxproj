@@ -22,6 +22,7 @@
 		39B9B89A1B73A6360006320D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B9B8991B73A6360006320D /* Assets.xcassets */; };
 		39B9B89E1B73A6360006320D /* lication.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 39B9B87F1B73A6350006320D /* lication.app */; };
 		39B9B8A91B73AEFB0006320D /* WatchConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B8A81B73AEFB0006320D /* WatchConnectivity.m */; };
+		39B9B8AC1B73B3B80006320D /* ConnectivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B9B8AB1B73B3B80006320D /* ConnectivityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		39B9B89B1B73A6360006320D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39B9B8A71B73AEFB0006320D /* WatchConnectivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchConnectivity.h; sourceTree = "<group>"; };
 		39B9B8A81B73AEFB0006320D /* WatchConnectivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchConnectivity.m; sourceTree = "<group>"; };
+		39B9B8AA1B73B3B80006320D /* ConnectivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectivityManager.h; sourceTree = "<group>"; };
+		39B9B8AB1B73B3B80006320D /* ConnectivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectivityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		39B9B88F1B73A6360006320D /* lication Extension */ = {
 			isa = PBXGroup;
 			children = (
+				39B9B8AA1B73B3B80006320D /* ConnectivityManager.h */,
+				39B9B8AB1B73B3B80006320D /* ConnectivityManager.m */,
 				39B9B8901B73A6360006320D /* InterfaceController.h */,
 				39B9B8911B73A6360006320D /* InterfaceController.m */,
 				39B9B8931B73A6360006320D /* ExtensionDelegate.h */,
@@ -327,6 +332,7 @@
 			files = (
 				39B9B8981B73A6360006320D /* ComplicationController.m in Sources */,
 				39B9B8951B73A6360006320D /* ExtensionDelegate.m in Sources */,
+				39B9B8AC1B73B3B80006320D /* ConnectivityManager.m in Sources */,
 				39B9B8921B73A6360006320D /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

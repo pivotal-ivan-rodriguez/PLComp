@@ -1,20 +1,20 @@
-#import "WatchConnectivity.h"
+#import "ConnectivityManager.h"
 
 @import WatchConnectivity;
 
-@interface WatchConnectivity () <WCSessionDelegate>
+@interface ConnectivityManager () <WCSessionDelegate>
 
 @end
 
-@implementation WatchConnectivity
+@implementation ConnectivityManager
 
 #pragma mark - Public
 
 + (instancetype)sharedInstance {
-    static WatchConnectivity *sharedInstance;
+    static ConnectivityManager *sharedInstance;
     static dispatch_once_t token;
     dispatch_once(&token, ^{
-        sharedInstance = [WatchConnectivity new];
+        sharedInstance = [ConnectivityManager new];
     });
     
     return sharedInstance;
@@ -46,6 +46,13 @@
 
 - (void)sessionWatchStateDidChange:(WCSession *)session {
     //handle session state
+}
+
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext {
+    NSLog(@"Received context %@",applicationContext);
+    if ([self.delegate conformsToProtocol:@protocol(ConnectivityManagerDelegate)]) {
+        [self.delegate didReceiveContext:applicationContext];
+    }
 }
 
 @end

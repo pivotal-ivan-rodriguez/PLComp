@@ -1,6 +1,9 @@
 #import "InterfaceController.h"
+#import "ConnectivityManager.h"
 
-@interface InterfaceController()
+@interface InterfaceController() <ConnectivityManagerDelegate>
+
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *contextLabel;
 
 @end
 
@@ -8,18 +11,29 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
-    // Configure interface objects here.
+    
+    [[ConnectivityManager sharedInstance] setDelegate:self];
 }
 
 - (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    NSDictionary *context = [[ConnectivityManager sharedInstance] receivedApplicationContext];
+    NSString *text = context[@"text"];
+    if (text) {
+        [self.contextLabel setText:text];
+    }
 }
 
 - (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+- (void)didReceiveContext:(NSDictionary *)context {
+    NSString *text = context[@"text"];
+    if (text) {
+        [self.contextLabel setText:text];
+    }
 }
 
 @end
